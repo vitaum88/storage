@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h1>Hello, {{ current_user.username }}</h1>
+    {% for file in files %}
+    <div><p>
+        {{ file.filename }} - <a href="{{ file.address }}">Delete</a> <a href="#">Download</a></p></div>
+    {% endfor %}
+{% endblock %}
